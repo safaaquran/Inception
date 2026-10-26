@@ -9,6 +9,10 @@ services:
       - mariadb_data:/var/lib/mysql
     networks:
       - inception
+    secrets:
+      - db_password
+      - db_root_password
+      - db_admin_password
 
 volumes:
   mariadb_data:
@@ -16,3 +20,11 @@ volumes:
 networks:
   inception:
     driver: bridge
+
+secrets:
+  db_password:
+    file: ../secrets/db_password.txt
+  db_root_password:
+    file: ../secrets/db_root_password.txt
+  db_admin_password:
+    file: ../secrets/db_admin_password.txt
