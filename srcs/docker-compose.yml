@@ -13,10 +13,24 @@ services:
       - db_password
       - db_root_password
       - db_admin_password
+  wordpress:
+    build: ./requirements/wordpress
+    image: wp-inception
+    container_name: wordpress
+    volumes:
+      - wordpress_data:/var/www/html
+    env_file:
+      - .env
+    networks:
+      - inception
+    secrets:
+      - db_password
+      - wp_admin_password
+         
 
 volumes:
   mariadb_data:
-
+  wordpress_data:
 networks:
   inception:
     driver: bridge
@@ -28,3 +42,5 @@ secrets:
     file: ../secrets/db_root_password.txt
   db_admin_password:
     file: ../secrets/db_admin_password.txt
+  wp_admin_password:
+    file: ../secrets/wp_admin_password.txt
