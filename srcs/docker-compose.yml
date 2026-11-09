@@ -26,6 +26,18 @@ services:
     secrets:
       - db_password
       - wp_admin_password
+  nginx:
+    build: ./requirements/nginx
+    image: nginx-inception
+    container_name: nginx
+    volumes:
+      - wordpress_data:/var/www/html:ro
+    networks:
+      - inception
+    ports:
+      - "443:443"
+    secrets:
+      - nginx_key
          
 
 volumes:
@@ -44,3 +56,5 @@ secrets:
     file: ../secrets/db_admin_password.txt
   wp_admin_password:
     file: ../secrets/wp_admin_password.txt
+  nginx_key:
+    file: ../secrets/nginx.key
