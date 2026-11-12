@@ -43,15 +43,17 @@ services:
 volumes:
   mariadb_data:
     driver: local
-    driver_opts: none
-    o: bind
-    device: /home/sal-qur/data/mariadb
+    driver_opts:
+      type: none
+      o: bind
+      device: /home/sal-qur/data/mariadb
 
   wordpress_data:
     driver: local
-    driver_opts: none
-    o: bind
-    device: /home/sal-qur/data/wordpress
+    driver_opts:
+      type: none
+      o: bind
+      device: /home/sal-qur/data/wordpress
 networks:
   inception:
     driver: bridge
