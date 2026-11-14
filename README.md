@@ -131,14 +131,11 @@ https://sal-qur.42.fr/wp-admin
 
 ### Documentation
 
-- [Docker Documentation](https://docs.docker.com/)
-- [Docker Compose Documentation](https://docs.docker.com/compose/)
-- [Dockerfile Reference](https://docs.docker.com/reference/dockerfile/)
-- [NGINX Documentation](https://nginx.org/en/docs/)
-- [MariaDB Documentation](https://mariadb.com/kb/en/documentation/)
-- [WordPress Documentation](https://developer.wordpress.org/)
-- [PHP-FPM Documentation](https://www.php.net/manual/en/install.fpm.php)
-- [OpenSSL Documentation](https://docs.openssl.org/)
+- https://docs.docker.com/
+- https://www.geeksforgeeks.org/linux-unix/shell-script-examples/
+- https://purple-page-995.notion.site/A-simple-Documentation-for-inception-dd60c488201741b09f1ed64157245bdf
+- https://dev.to/kabilan/understanding-nginx-core-contexts-52o8
+- https://docs.docker.com/get-started/docker-overview/?source=post_page-----d5c58f8e3f71---------------------------------------
 
 ### AI Usage
 
@@ -148,7 +145,4 @@ They were used to:
 
 - Explain Docker, Docker Compose, networking, volumes, TLS, and related system administration concepts.
 - Help understand Dockerfile instructions and service configuration.
-- Assist with troubleshooting and interpreting container logs.
-- Support the organization and review of project documentation.
 
-All generated suggestions and explanations were reviewed, tested, and adapted during the implementation of the project. The final configuration and implementation remain the responsibility of the project author.
