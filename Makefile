@@ -3,7 +3,12 @@ NAME = Inception
 COMPOSE_FILE = ./srcs/docker-compose.yml
 DOCKER_COMPOSE = docker compose -f $(COMPOSE_FILE)
 
-all: up
+DATA_DIR = /home/sal-qur/data
+
+all:
+	mkdir -p $(DATA_DIR)/mariadb
+	mkdir -p $(DATA_DIR)/wordpress
+	docker compose -f srcs/docker-compose.yml up -d --build
 
 build:
 	$(DOCKER_COMPOSE) build
@@ -22,9 +27,6 @@ stop:
 
 restart:
 	$(DOCKER_COMPOSE) restart
-
-logs:
-	$(DOCKER_COMPOSE) logs -f
 
 ps:
 	$(DOCKER_COMPOSE) ps -a

@@ -1,7 +1,7 @@
 services:
   mariadb:
     build: ./requirements/mariadb
-    image: mariadb-inception
+    image: mariadb
     container_name: mariadb
     env_file:
       - .env
@@ -15,7 +15,7 @@ services:
       - db_admin_password
   wordpress:
     build: ./requirements/wordpress
-    image: wp-inception
+    image: wordpress
     container_name: wordpress
     volumes:
       - wordpress_data:/var/www/html
@@ -28,7 +28,7 @@ services:
       - wp_admin_password
   nginx:
     build: ./requirements/nginx
-    image: nginx-inception
+    image: nginx
     container_name: nginx
     volumes:
       - wordpress_data:/var/www/html:ro
